@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -12,18 +12,24 @@ export const GlobalStyle = createGlobalStyle`
     vertical-align: baseline;
   }
 
-
   .html {
     @media (max-width: 768px) {
       font-size: 87.5%;
     }
   }
 
-  html,
-  body {
-    background: #f3f3f5;
-    color: #f23768;
-  }
+  ${({ theme }) => css`
+    html,
+    body {
+      background: ${theme["gray-900"]};
+      color: ${theme["gray-300"]};
+    }
+
+    :focus {
+      outline: transparent;
+      box-shadow: 0 0 0 2px ${theme["green-500"]};
+    }
+  `}
 
   body {
     overflow-x: hidden;
