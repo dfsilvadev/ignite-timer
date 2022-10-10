@@ -1,7 +1,9 @@
-import { HtmlHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
+
+type ButtonType = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonProps = {
   icon?: ReactNode;
-  color?: "primary" | "danger";
+  color: "primary" | "danger";
   children: ReactNode;
-} & HtmlHTMLAttributes<HTMLButtonElement>;
+} & ButtonType;
