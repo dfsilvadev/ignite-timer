@@ -24,7 +24,7 @@ export const FormContainer = styled.div`
     justify-content: center;
     gap: 0.5rem;
     color: ${theme["gray-100"]};
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: bold;
     flex-wrap: wrap;
 
@@ -71,7 +71,7 @@ export const TaskInput = styled(BaseInput)`
 
 export const WrapperMinutesAmountInput = styled.div`
   ${({ theme }) => css`
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 
     width: 5rem;
     display: flex;
