@@ -1,6 +1,6 @@
 import styled, { css, DefaultTheme } from "styled-components";
 
-export const Container = styled.table`
+export const Container = styled.div`
   ${({ theme }) => css`
     flex: 1;
     overflow: auto;
