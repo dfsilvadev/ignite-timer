@@ -1,3 +1,18 @@
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { Router } from "./routes/Router";
+
+import { GlobalStyle } from "./styles/global";
+
+import { defaultTheme } from "./styles/theme/default";
+
 export function App() {
-  return <h1>Timer</h1>;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router />
+        <GlobalStyle />
+      </BrowserRouter>
+    </ThemeProvider>
+  );
 }
